@@ -1,0 +1,68 @@
+<%% title "P24" %>
+
+<p>
+  <strong>Session:</strong>
+  <%%=h @<%= singular_name %>.session_id %>
+</p>
+<p>
+  <strong>Id Sprzedawcy:</strong>
+  <%%=h @<%= singular_name %>.id_sprzedawcy %>
+</p>
+<p>
+  <strong>Kwota:</strong>
+  <%%=h @<%= singular_name %>.kwota %>
+</p>
+<p>
+  <strong>Klient:</strong>
+  <%%=h @<%= singular_name %>.klient %>
+</p>
+<p>
+  <strong>Adres:</strong>
+  <%%=h @<%= singular_name %>.adres %>
+</p>
+<p>
+  <strong>Kod:</strong>
+  <%%=h @<%= singular_name %>.kod %>
+</p>
+<p>
+  <strong>Miasto:</strong>
+  <%%=h @<%= singular_name %>.miasto %>
+</p>
+<p>
+  <strong>Kraj:</strong>
+  <%%=h @<%= singular_name %>.kraj %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%%=h @<%= singular_name %>.email %>
+</p>
+<p>
+  <strong>Opis:</strong>
+  <%%=h @<%= singular_name %>.opis %>
+</p>
+<p>
+  <strong>Order:</strong>
+  <%%=h @<%= singular_name %>.order_id %>
+</p>
+<p>
+  <strong>Order Id Full:</strong>
+  <%%=h @<%= singular_name %>.order_id_full %>
+</p>
+<p>
+  <strong>Error Code:</strong>
+  <%%=h @<%= singular_name %>.error_code %>
+</p>
+<p>
+  <strong>Language:</strong>
+  <%%=h @<%= singular_name %>.language %>
+</p>
+<p>
+  <strong>Metoda:</strong>
+  <%%=h @<%= singular_name %>.metoda %>
+</p>
+
+<p>
+  <%%= link_to "Edit", edit_<%= singular_name %>_path(@<%= singular_name %>) %> |
+  <%%= link_to "Destroy", @<%= singular_name %>, :confirm => 'Are you sure?', :method => :delete %> |
+  <%%= link_to "View All", <%= singular_name %>s_path %>
+</p>

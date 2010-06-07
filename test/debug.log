@@ -1,0 +1,286 @@
+# Logfile created on Mon Jun 07 12:43:12 +0200 2010 by logger.rb/22285
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (14.0ms)[0m   [0;1mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (11.3ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [4;36;1mPrzelewy24Test::P24 Load (0.5ms)[0m   [0;1mSELECT * FROM "p24s" [0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (13.6ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mPrzelewy24Test::P24 Load (0.4ms)[0m   [0;1mSELECT * FROM "p24s" [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (8.3ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (16.1ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (14.9ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (9.3ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (5.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (18.2ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (9.7ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (10.2ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (6.4ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (15.5ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (15.5ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (11.9ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (12.4ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (11.7ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (58.1ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.3ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (9.2ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (23.0ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (8.1ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (10.1ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (16.3ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (4.2ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (14.8ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (16.8ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (4.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (8.1ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (12.3ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (13.8ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (17.7ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (15.7ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (13.3ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (15.9ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (12.2ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (13.8ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (17.2ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.4ms)[0m   [0;1mDROP TABLE "p24s"[0m
+  [4;35;1mSQL (8.6ms)[0m   [0mCREATE TABLE "p24s" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255), "id_sprzedawcy" varchar(255), "kwota" integer, "klient" varchar(255), "adres" varchar(255), "kod" varchar(255), "miasto" varchar(255), "kraj" varchar(255), "email" varchar(255), "opis" text, "order_id" integer, "order_id_full" integer, "error_code" varchar(255), "language" varchar(255), "metoda" integer, "is_for_extension" boolean DEFAULT 'f', "is_verified" boolean DEFAULT 'f', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM "schema_migrations"[0m

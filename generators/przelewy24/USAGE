@@ -1,0 +1,12 @@
+Description:
+    Stubs out new model and controller for Przelewy24 payment service.
+    Pass the name of the model you want to be responsible for that.
+
+Example:
+    ./script/generate przelewy24 p24
+
+    This will create:
+        app/models/p24.rb
+        app/controllers/p24s_controller.rb
+        app/views/p24s/...
+        db/migration/create_p24s.rb

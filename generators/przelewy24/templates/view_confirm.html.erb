@@ -1,0 +1,33 @@
+<%% form_tag 'https://secure.przelewy24.pl/index.php' do %>
+
+  <%% @<%= singular_name %>.attributes_for_p24.each do |key, value| %>
+    <%%= hidden_field_tag key, value %>
+  <%% end %>
+
+  <%%= hidden_field_tag :<%= singular_name %>_return_url_ok, ok_p24s_url %>
+  <%%= hidden_field_tag :<%= singular_name %>_return_url_error, error_p24s_url %>
+
+  <div id="confirm">
+    <p>
+    <strong>Email:</strong>
+    <%%=h @<%= singular_name %>.email %>
+    </p>
+    <p>
+    <strong>Klient:</strong>
+    <%%=h @<%= singular_name %>.klient %>
+    </p>
+    <p>
+    <strong>Adres:</strong>
+    <%%=h @<%= singular_name %>.adres %>
+    </p>
+    <p>
+    <strong>Kod:</strong>
+    <%%=h @<%= singular_name %>.kod %>
+    </p>
+    <p>
+    <strong>Miasto:</strong>
+    <%%=h @<%= singular_name %>.miasto %>
+    </p>
+  </div>
+  <p><%%= submit_tag t('submit_to_p24') %></p>
+<%% end %>

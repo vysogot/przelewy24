@@ -13,16 +13,17 @@ Example
 Application that have products to sell finally sends the form to Przelewy24.
 All transaction security and verification is held by this plugin and Przelewy24 site.
 
-Just after cloning it do, example:
+Install:
+sudo gem install przelewy24
 
+cd yourapp/
 script/generate przelewy24 payment
 rake db:migrate
 
-copy/paste to routes:
+copy and paste to config/routes.rb:
 map.confirm_payment 'confirmation', :controller => :payments, :action => :confirm
 map.ok_payments 'verification-successful', :controller => :payments, :action => :ok, :conditions => { :method => :post }
 map.error_payments 'error-in-transaction', :controller => :payments, :action => :error
-
 
 and you are free to connect your shop with Przelewy24 payment service.
 

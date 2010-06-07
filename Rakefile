@@ -23,4 +23,6 @@ end
 desc 'Turn this plugin into a gem.'
 Gem::PackageTask.new(spec) do |pkg|
   pkg.gem_spec = spec
+  pkg.need_zip = true
+  pkg.need_tar = true
 end

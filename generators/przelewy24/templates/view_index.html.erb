@@ -14,7 +14,7 @@
     <%% for <%= singular_name %> in @<%= plural_name %> %>
       <tr>
         <td><%%=h <%= singular_name %>.order_id  %></td>
-        <td><%%= link_to h(<%= singular_name %>.klient) %></td>
+        <td><%%=h <%= singular_name %>.klient %></td>
         <td><%%=h number_to_currency(<%= singular_name %>.kwota_pln) %></td>
         <td><%%=h <%= singular_name %>.email %></td>
         <td><%%=h <%= singular_name %>.opis %></td>

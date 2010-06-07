@@ -101,7 +101,7 @@ class Przelewy24Generator < Rails::Generator::NamedBase
   end
 
   def p24_views
-    %w( new edit index _form show verified error confirm )
+    %w( new index _form show verified error confirm )
 
   end
 end

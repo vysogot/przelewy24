@@ -3,10 +3,10 @@ Description:
     Pass the name of the model you want to be responsible for that.
 
 Example:
-    ./script/generate przelewy24 p24
+    ./script/generate przelewy24 payment
 
     This will create:
-        app/models/p24.rb
-        app/controllers/p24s_controller.rb
-        app/views/p24s/...
-        db/migration/create_p24s.rb
+        app/models/payment.rb
+        app/controllers/payments_controller.rb
+        app/views/payments/...
+        db/migration/create_payments.rb

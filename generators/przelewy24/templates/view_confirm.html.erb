@@ -4,8 +4,8 @@
     <%%= hidden_field_tag key, value %>
   <%% end %>
 
-  <%%= hidden_field_tag :<%= singular_name %>_return_url_ok, ok_p24s_url %>
-  <%%= hidden_field_tag :<%= singular_name %>_return_url_error, error_p24s_url %>
+  <%%= hidden_field_tag :<%= singular_name %>_return_url_ok, ok_<%= plural_name %>_url %>
+  <%%= hidden_field_tag :<%= singular_name %>_return_url_error, error_<%= plural_name %>_url %>
 
   <div id="confirm">
     <p>
@@ -27,6 +27,14 @@
     <p>
     <strong>Miasto:</strong>
     <%%=h @<%= singular_name %>.miasto %>
+    </p>
+    <p>
+    <strong>Opis:</strong>
+    <%%=h @<%= singular_name %>.opis %>
+    </p>
+    <p>
+    <strong>Kwota:</strong>
+    <%%=h @<%= singular_name %>.kwota %>
     </p>
   </div>
   <p><%%= submit_tag t('submit_to_p24') %></p>

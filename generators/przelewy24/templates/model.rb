@@ -1,7 +1,7 @@
 # responsible for process with payment service Przelewy24.pl
 class <%= class_name %> < ActiveRecord::Base
 
-  before_create :set_variables
+  before_create :set_session_id
 
   SELLER_ID = 1000 # Put here you account login on przelewy24
   COUNTRY   = 'PL'
@@ -59,12 +59,6 @@ class <%= class_name %> < ActiveRecord::Base
   end
 
   private
-
-  # setting data for p24 from foreign objects
-  def set_opis_and_kwota(opis, kwota)
-    self.opis = opis
-    self.kwota = kwota
-  end
 
   # setting session id for connection with przelewy24
   def set_session_id

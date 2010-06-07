@@ -83,7 +83,7 @@ class Przelewy24Generator < Rails::Generator::NamedBase
 
       # Generate model
       m.template(
-        'model.rb', File.join('app/models', "#{file_name}.rb")
+        'model.rb', File.join('app/models', class_path, "#{file_name}.rb")
       )
 
     end

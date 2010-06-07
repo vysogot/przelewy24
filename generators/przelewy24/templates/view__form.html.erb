@@ -20,5 +20,13 @@
   <%%= f.label :miasto %><br />
   <%%= f.text_field :miasto, :value => @<%= singular_name %>.miasto %>
   </p>
-  <p><%%= f.submit t('submit') %></p>
+  <p>
+  <%%= f.label :opis %><br />
+  <%%= f.text_field :opis, :value => @<%= singular_name %>.opis %>
+  </p>
+  <p>
+  <%%= f.label :kwota %><br />
+  <%%= f.text_field :kwota, :value => @<%= singular_name %>.kwota %>
+  </p>
+ <p><%%= f.submit t('submit') %></p>
 <%% end %>

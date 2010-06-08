@@ -1,9 +1,7 @@
 rails-przelewy24
 ==========
 
-No yet finished.
-This is the plugin for polish payment service Przelewy24.pl
-
+This is the plugin for polish payment service Przelewy24.pl.
 It consist of a generator of model, controller and views for dealing with Przelewy24.
 
 
@@ -27,5 +25,11 @@ map.error_payments 'error-in-transaction', :controller => :payments, :action => 
 
 and you are free to connect your shop with Przelewy24 payment service.
 
+====
+Thanks for forking and helping!
+
+major issues:
+- rspecs to gem needs to be done
+====
 
 Copyright (c) 2010 [Jakub Godawa, Łukasz Krystkowiak], released under the MIT license

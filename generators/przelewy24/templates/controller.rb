@@ -48,18 +48,20 @@ class <%= controller_class_name %>Controller < ApplicationController
 
   # first verification from Przelewy24.pl
   def ok
-    @<%= file_name %> = <%= class_name %>.find_by_session_id(params[:<%= file_name %>_session_id])
-    if @<%= file_name %> && @<%= file_name %>.update_attribute(:order_id, params[:p24_order_id])
+    @<%= file_name %> = <%= class_name %>.find_by_session_id(params[:p24_session_id])
+    if @<%= file_name %> && @<%= file_name %>.update_attributes(:order_id => params[:p24_order_id], 
+                                                                :metoda => params[:p24_karta], 
+                                                                :order_id_full => params[:p24_order_id_full])
 
       # verification with service - name in polish to be consistent with current PHP spec
       przelewy24_weryfikuj
+    else
+      flash[:error] = 'Transaction not found'
+      redirect_to <%= table_name %>_url
     end
   end
 
   def error
-  end
-
-  def verified    
   end
 
   private
@@ -88,8 +90,7 @@ class <%= controller_class_name %>Controller < ApplicationController
 
         # check if transaction is not already used
         unless @<%= file_name %>.is_verified
-          flash[:notice] = t('transaction_successfully_verified')
-          redirect_to accounts_url
+          @<%= file_name %>.update_attribute(:is_verified, true)
           return
         else
           error_desc = t('transaction_already_used')
@@ -101,6 +102,7 @@ class <%= controller_class_name %>Controller < ApplicationController
       error_desc = t('connection_error') 
     end
 
+    @<%= file_name %>.update_attribute(:error_code, results[2])
     # display error flash and redirect to error action
     flash[:error] = error_desc
     redirect_to :action => :error

@@ -28,3 +28,5 @@
 <%% else %>
   <p><%%= t('no_transactions') %></p>
 <%% end %>
+
+<%%= link_to t('new'), new_<%= singular_name %>_path %>

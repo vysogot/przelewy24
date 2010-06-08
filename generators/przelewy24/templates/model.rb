@@ -63,6 +63,9 @@ class <%= class_name %> < ActiveRecord::Base
   # setting session id for connection with przelewy24
   def set_session_id
     self.session_id = <%= class_name %>.generate_session_id
+    self.id_sprzedawcy = SELLER_ID
+    self.kraj = COUNTRY
+    self.language = LANGUAGE
   end
 
   class <%= class_name %>Tools

@@ -8,7 +8,7 @@ PKG_FILES = FileList[
 
 spec = Gem::Specification.new do |s|
   s.name = "rails-przelewy24"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
   s.author = "Jakub Godawa, Łukasz Krystkowiak"
   s.email = "jakub.godawa@gmail.com"
   s.homepage = "http://github.com/vysogot/przelewy24"

@@ -86,7 +86,10 @@ class Przelewy24Generator < Rails::Generator::NamedBase
         'model.rb', File.join('app/models', class_path, "#{file_name}.rb")
       )
 
+      m.readme "INSTALL"
+      
     end
+    
   end
 
   protected
@@ -101,7 +104,7 @@ class Przelewy24Generator < Rails::Generator::NamedBase
   end
 
   def p24_views
-    %w( new index _form show verified error confirm )
+    %w( new index _form show ok error confirm )
 
   end
 end

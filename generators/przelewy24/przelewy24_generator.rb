@@ -3,14 +3,14 @@ class Przelewy24Generator < Rails::Generator::NamedBase
 
   # from rails/scaffold_generator
   attr_reader   :controller_name,
-                :controller_class_path,
-                :controller_file_path,
-                :controller_class_nesting,
-                :controller_class_nesting_depth,
-                :controller_class_name,
-                :controller_underscore_name,
-                :controller_singular_name,
-                :controller_plural_name
+    :controller_class_path,
+    :controller_file_path,
+    :controller_class_nesting,
+    :controller_class_nesting_depth,
+    :controller_class_name,
+    :controller_underscore_name,
+    :controller_singular_name,
+    :controller_plural_name
   alias_method  :controller_file_name,  :controller_underscore_name
   alias_method  :controller_table_name, :controller_plural_name
 
@@ -68,6 +68,18 @@ class Przelewy24Generator < Rails::Generator::NamedBase
       # Route
       m.route_resources controller_file_name
 
+      # Named routes monkey inject
+      # unless options[:pretend]
+      #   gsub_file 'config/routes.rb', /(resource \:#{controller_file_name})/mi do |match|
+      #     "#{match}\n
+      #      map.confirm_#{@singular_name} 'confirmation', :controller => :#{@plural_name}, :action => :confirm
+      #      map.ok_#{@plural_name} 'verification-successful', :controller => :#{@plural_name}, :action => :ok, :conditions => { :method => :post }
+      #      map.error_#{@plural_name} 'error-in-transaction', :controller => :#{@plural_name}, :action => :error
+      #      \n"
+      #   end
+      # end
+
+
       migration_file_path = file_path.gsub(/\//, '_')
       migration_name = class_name
       if ActiveRecord::Base.pluralize_table_names
@@ -87,9 +99,9 @@ class Przelewy24Generator < Rails::Generator::NamedBase
       )
 
       m.readme "INSTALL"
-      
+
     end
-    
+
   end
 
   protected

@@ -1,35 +1,36 @@
-rails-przelewy24
-==========
+h1. rails-przelewy24
 
-This is the plugin for polish payment service Przelewy24.pl.
-It consist of a generator of model, controller and views for dealing with Przelewy24.
+h2. What it is?
 
+* This is the gem that consist of generator, to generate files to play with polish payment service "Przelewy24.pl":http://www.przelewy24.pl
+* Generator creates model, controller and views for dealing with Przelewy24.
 
-Example
-=======
+h2. What for?
 
-Application that have products to sell finally sends the form to Przelewy24.
-All transaction security and verification is held by this plugin and Przelewy24 site.
+* Application that have products to sell finally sends the form to Przelewy24 service. All transaction security and verification is held by generated files and Przelewy24 side.
 
-Install:
-sudo gem install przelewy24
+h2. Installation
 
-cd yourapp/
-script/generate przelewy24 payment
-rake db:migrate
+@sudo gem install przelewy24@
 
-copy and paste to config/routes.rb:
-map.confirm_payment 'confirmation', :controller => :payments, :action => :confirm
-map.ok_payments 'verification-successful', :controller => :payments, :action => :ok, :conditions => { :method => :post }
-map.error_payments 'error-in-transaction', :controller => :payments, :action => :error
+@cd yourapp/@
+@script/generate przelewy24 payment@
+@rake db:migrate@
 
-and you are free to connect your shop with Przelewy24 payment service.
+copy and paste to @config/routes.rb@:
+@map.confirm_payment 'confirmation', :controller => :payments, :action => :confirm@
+@map.ok_payments 'verification-successful', :controller => :payments, :action => :ok, :conditions => { :method => :post }@
+@map.error_payments 'error-in-transaction', :controller => :payments, :action => :error@
 
-====
+and you are free to connect your transactions with Przelewy24 payment service.
+
+h2. Contribute
+
 Thanks for forking and helping!
 
 major issues:
-- rspecs to gem needs to be done
-====
+- rspecs or tests to gem needs to be done
 
-Copyright (c) 2010 [Jakub Godawa, Łukasz Krystkowiak], released under the MIT license
+h3. License
+
+Copyright (c) 2010 ["Jakub Godawa":http://github.com/vysogot , Łukasz Krystkowiak], released under the MIT license

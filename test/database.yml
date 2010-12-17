@@ -1,0 +1,6 @@
+test:
+  adapter: sqlite3
+  database: db/cheese_plugin_test.db
+  encoding: unicode
+  pool: 5
+  timeout: 5000

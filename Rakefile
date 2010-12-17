@@ -1,28 +1,24 @@
-require 'rubygems'
-require 'rubygems/package_task'
+require 'rake/testtask'
 
-PKG_FILES = FileList[
-  '[a-zA-Z]*',
-  'generators/**/*'
-]
-
-spec = Gem::Specification.new do |s|
-  s.name = "rails-przelewy24"
-  s.version = "0.0.2"
-  s.author = "Jakub Godawa, Łukasz Krystkowiak"
-  s.email = "jakub.godawa@gmail.com"
-  s.homepage = "http://github.com/vysogot/przelewy24"
-  s.platform = Gem::Platform::RUBY
-  s.summary = "Tool to deal with Przelewy24.pl payment service"
-  s.description = "Gem that can generate files necesary to be able to use Przelewy24.pl as your payment service."
-  s.files = PKG_FILES.to_a
-  s.has_rdoc = false
-  s.extra_rdoc_files = ["README"]
+Rake::TestTask.new do |test|
+  test.pattern = 'test/**/*_test.rb'
+  test.libs << 'test'
 end
 
-desc 'Turn this plugin into a gem.'
-Gem::PackageTask.new(spec) do |pkg|
-  pkg.gem_spec = spec
-  pkg.need_zip = true
-  pkg.need_tar = true
+
+begin
+  require "jeweler"
+  Jeweler::Tasks.new do |gem|
+    gem.name = "przelewy24"
+    gem.homepage = "http://github.com/rails3-przelewy24"
+    gem.summary = "This is a Rails engine to play with Polish payment service Przelewy24.pl"
+    gem.description = "Gem consist of a generator 'przelewy24'. Application that have products for sale finally sends the form to Przelewy24 service. All transaction security and verification is held by generated files and Przelewy24 side."
+    gem.email = "jakub.godawa@gmail.com"
+    gem.authors = ["Jakub Godawa"]
+    gem.files = Dir["{lib}/**/*", "{app}/**/*", "{public}/**/*", "{config}/**/*"]
+    gem.rubyforge_project = "rails-p24"
+  end
+  Jeweler::GemcutterTasks.new
+rescue
+  puts "Jeweler or dependency not available."
 end

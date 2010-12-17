@@ -1,0 +1,51 @@
+<%% if Rails.env.eql?('development') %>
+  <%%= link_to 'normal payment', confirm_<%= plural_name %>_url %>
+  <%%= link_to 'test ok payment', confirm_<%= plural_name %>_url(:test => 'TEST_OK') %>
+  <%%= link_to 'test error payment', confirm_<%= plural_name %>_url(:test => 'TEST_ERR') %>
+<%% end %>
+
+<%%= form_tag 'https://secure.przelewy24.pl/index.php' do %>
+
+  <%% @<%= singular_name %>.attributes_for_p24.each do |key, value| %> 
+    <%% if key == 'p24_opis' %>
+      <%%= hidden_field_tag key, params[:test] || value %>
+    <%% else %>
+      <%%= hidden_field_tag key, value %>
+    <%% end %>
+  <%% end %>
+
+  <%%= hidden_field_tag :p24_return_url_ok, ok_<%= plural_name %>_url %>
+  <%%= hidden_field_tag :p24_return_url_error, error_<%= plural_name %>_url %>
+
+  <div id="confirm">
+    <p>
+    <strong><%%= t('przelewy24.email') %>:</strong>
+    <%%=h @<%= singular_name %>.email %>
+    </p>
+    <p>
+    <strong><%%= t('przelewy24.klient') %>:</strong>
+    <%%=h @<%= singular_name %>.klient %>
+    </p>
+    <p>
+    <strong><%%= t('przelewy24.adres') %>:</strong>
+    <%%=h @<%= singular_name %>.adres %>
+    </p>
+    <p>
+    <strong><%%= t('przelewy24.kod') %>:</strong>
+    <%%=h @<%= singular_name %>.kod %>
+    </p>
+    <p>
+    <strong><%%= t('przelewy24.miasto') %>:</strong>
+    <%%=h @<%= singular_name %>.miasto %>
+    </p>
+    <p>
+    <strong><%%= t('przelewy24.opis') %>:</strong>
+    <%%=h @<%= singular_name %>.opis %>
+    </p>
+    <p>
+    <strong><%%= t('przelewy24.kwota') %>:</strong>
+    <%%=h @<%= singular_name %>.kwota %>
+    </p>
+  </div>
+  <p><%%= submit_tag t('przelewy24.submit_to_p24') %></p>
+<%% end %>

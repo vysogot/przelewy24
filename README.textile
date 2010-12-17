@@ -1,4 +1,4 @@
-h1. rails-przelewy24
+h1. przelewy24
 
 h2. What it is?
 
@@ -9,18 +9,16 @@ h2. What for?
 
 * Application that have products to sell finally sends the form to Przelewy24 service. All transaction security and verification is held by generated files and Przelewy24 side.
 
-h2. Installation
+h2. Installation on Rails 3 app
 
-@sudo gem install przelewy24@
+Add this to your Gemfile
+@gem 'przelewy24'@
 
-@cd yourapp/@
-@script/generate przelewy24 payment@
-@rake db:migrate@
+Then install it
+@bundle install@
 
-copy and paste to @config/routes.rb@:
-@map.confirm_payment 'confirmation', :controller => :payments, :action => :confirm@
-@map.ok_payments 'verification-successful', :controller => :payments, :action => :ok, :conditions => { :method => :post }@
-@map.error_payments 'error-in-transaction', :controller => :payments, :action => :error@
+Generate the files for Przelewy24 with ModelName and Przelewy24 SellerID
+@rails generate przelewy24 payment 1034@
 
 and you are free to connect your transactions with Przelewy24 payment service.
 
@@ -33,4 +31,4 @@ major issues:
 
 h3. License
 
-Copyright (c) 2010 ["Jakub Godawa":http://github.com/vysogot , Łukasz Krystkowiak], released under the MIT license
+Copyright (c) 2010 ["Jakub Godawa":http://github.com/vysogot], released under the MIT license

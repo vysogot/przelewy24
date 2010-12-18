@@ -12,7 +12,7 @@ h2. What for?
 h2. Installation on Rails 3 app
 
 Add this to your Gemfile
-@gem 'przelewy24'@
+@gem 'rails-przelewy24'@
 
 Then install it
 @bundle install@

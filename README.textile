@@ -1,3 +1,5 @@
+h1. UNMAINTAINED
+
 h1. rails-przelewy24 gem
 
 h2. What it is?

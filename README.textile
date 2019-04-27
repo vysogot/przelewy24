@@ -20,7 +20,7 @@ Then install it
 @bundle install@
 
 Generate the files for Przelewy24 with ModelName and Przelewy24 SellerID
-@rails generate przelewy24 payment 1034@
+@rails generate przelewy24 Payment 1034@
 
 and you are free to connect your product/services models with generated files so they can provide you with connection to the Przelewy24.pl service.
 
